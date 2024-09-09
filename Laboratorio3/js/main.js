@@ -1,7 +1,7 @@
-import { esPalindromoDobleBase } from './js/palindromo.js';
-import { contarCaracteres } from './js/contarCaracteres.js';
-import { esBisiesto } from './js/bisiesto.js';
-import { sumaPrimos } from './js/sumaPrimos.js';
+import { esPalindromoDobleBase } from './palindromo.js';
+import { contarCaracteres } from './contarCaracteres.js';
+import { esBisiesto } from './bisiesto.js';
+import { sumaPrimos } from './sumaPrimos.js';
 
 document.getElementById('palindromoBtn').addEventListener('click', () => {
     const numero = document.getElementById('palindromoInput').value;
@@ -22,3 +22,4 @@ document.getElementById('primosBtn').addEventListener('click', () => {
     const n = document.getElementById('primosInput').value;
     alert(`La suma de los primos menores a ${n} es: ${sumaPrimos(n)}`);
 });
+
