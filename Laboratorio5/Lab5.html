@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario dinámico</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            padding: 1rem;
+        }
+        section {
+            background-color: gray;
+            color: black;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            border: 1px solid beige;
+            margin-bottom: 1rem;
+        }
+        #result {
+            background-color: beige;
+            padding: 1rem;
+            border: 1px solid black;
+            width: 100%;
+            text-align: center;
+        }
+        .red {
+            background-color: red;
+            color: red;
+        }
+        .blue {
+            background-color: blue;
+            color: blue;
+        }
+        .orange {
+            background-color: orange;
+            color: orange;
+        }
+        .green {
+            background-color: green;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario dinámico</h1>
+    <main>
+        <section id="form">
+            <form>
+                <label for="campoTexto">Escribe algo:</label>
+                <input type="text" id="campoTexto" placeholder="Escribe aquí...">
+
+                <label for="color-select">Selecciona un color:</label>
+                <select id="color-select" name="color">
+                    <option value="red">Rojo</option>
+                    <option value="blue">Azul</option>
+                    <option value="orange">Naranja</option>
+                    <option value="green">Verde</option>
+                </select>
+            </form>
+        </section>
+        <section>
+            <div id="result">El resultado se mostrará aquí...</div>
+        </section>
+    </main>
+
+    <!-- Llamada al archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
