@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Votación Modular</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+       
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            background-color: white;
+            padding: 30px;
+            border: 3px solid orange;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: orange;
+            font-size: 2rem; 
+            margin-bottom: 25px;
+        }
+
+        /* Estilo para los formularios y la tabla */
+        .formulario, .tabla {
+            margin-bottom: 25px;
+        }
+
+        .formulario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .formulario input[type="text"] {
+            padding: 10px;
+            font-size: 1.2rem;
+            width: 40%;
+            border-radius: 8px;
+            border: 2px solid orange;
+        }
+
+        /* Resaltar el selector de color con etiqueta */
+        .formulario label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .formulario input[type="color"] {
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 2px solid orange;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .formulario button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Estilo para la tabla de candidatos */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 2px solid orange;
+            font-size: 1.1rem; /* Tamaño de fuente ajustado */
+        }
+
+        th {
+            background-color: orange;
+            color: white;
+        }
+
+        /* Estilo para el gráfico de barras */
+        .bar {
+            height: 25px;
+            background-color: #ddd;
+            margin: 10px 0;
+        }
+
+        /* Ajuste del gráfico */
+        #grafico {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Votación</h1>
+        
+        <!-- Formulario para agregar candidatos -->
+        <div class="formulario">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <label for="color">Color:</label>
+            <input type="color" id="color">
+            <button id="agregar">Agregar Candidato</button>
+        </div>
+
+        <!-- Tabla de candidatos -->
+        <div class="tabla">
+            <table id="tabla-candidatos">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Votos</th>
+                        <th>Color</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Gráfico de barras -->
+        <div id="grafico"></div>
+    </div>
+
+    <!-- Importación de los módulos -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
