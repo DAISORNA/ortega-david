@@ -2,9 +2,11 @@ import { agregarCandidato, eliminarCandidato, obtenerCandidatos } from './candid
 import { votarCandidato } from './puntuaciones.js';
 import { renderGrafico } from './graficos.js';
 
+// Función para renderizar la tabla de candidatos
 function renderTabla() {
     const tabla = document.querySelector('#tabla-candidatos tbody');
-    tabla.innerHTML = '';  // Limpiamos la tabla
+    tabla.innerHTML = '';  // Limpiar la tabla
+
     const candidatos = obtenerCandidatos();
     candidatos.forEach((candidato, index) => {
         const fila = document.createElement('tr');
@@ -21,24 +23,33 @@ function renderTabla() {
     });
 }
 
+// Función para votar por un candidato
 window.votar = function (index) {
     votarCandidato(index);
     renderTabla();
     renderGrafico();
 };
 
+// Función para eliminar un candidato
 window.eliminar = function (index) {
     eliminarCandidato(index);
     renderTabla();
     renderGrafico();
 };
 
-document.getElementById('agregar').addEventListener('click', () => {
-    const nombre = document.getElementById('nombre').value;
-    const color = document.getElementById('color').value;
+// Evento para agregar un nuevo candidato
+document.querySelector('#agregar').addEventListener('click', () => {
+    const nombre = document.querySelector('#nombre').value;
+    const color = document.querySelector('#color').value;
     if (nombre) {
         agregarCandidato(nombre, color);
         renderTabla();
         renderGrafico();
     }
+});
+
+// Inicialización de la tabla y gráfico en la carga de la página
+document.addEventListener('DOMContentLoaded', () => {
+    renderTabla();
+    renderGrafico();
 });

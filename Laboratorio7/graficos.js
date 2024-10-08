@@ -1,8 +1,9 @@
 import { obtenerPorcentajes } from './puntuaciones.js';
 
+// Función para renderizar el gráfico de barras basado en los votos
 export function renderGrafico() {
-    const grafico = document.getElementById('grafico');
-    grafico.innerHTML = '';  
+    const grafico = document.querySelector('#grafico');
+    grafico.innerHTML = '';  // Limpiar el gráfico existente
 
     const porcentajes = obtenerPorcentajes();
     porcentajes.forEach(candidato => {
