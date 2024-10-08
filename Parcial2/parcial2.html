@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Números con Máquina de Estados</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #generateButton {
+            font-size: 25px;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #generateButton:hover {
+            background-color: #0056b3;
+        }
+
+        .number-display {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap; /* Permitir que los números se envuelvan en múltiples líneas */
+        }
+
+        .number-box {
+            width: 80px;
+            height: 80px;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generador de Números</h1>
+        <div class="controls">
+            <button id="upButton">⬆</button>
+            <button id="downButton">⬇</button>
+        </div>
+        <button id="generateButton">Generar</button>
+        <div class="number-display" id="numberDisplay">
+            <!-- Aquí se mostrarán los números generados -->
+        </div>
+    </div>
+
+    <!-- Importamos el módulo JavaScript -->
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
