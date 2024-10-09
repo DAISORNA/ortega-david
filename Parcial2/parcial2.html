@@ -5,54 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Números con Máquina de Estados</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .outer-container {
+            width: 80%;
+            max-width: 1000px;
+            border: 5px solid orange; /* Marco externo naranja */
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: white; /* Fondo blanco */
+            text-align: center; /* Centrar el texto dentro del contenedor */
         }
 
         .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 500px;
+            padding: 30px;
+            border: 3px solid orange; /* Marco interno naranja */
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: orange;
+            font-size: 2rem;
+            margin-bottom: 25px;
         }
 
         .controls {
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* Espaciado entre botones */
             align-items: center;
             margin-bottom: 20px;
         }
 
         button {
-            padding: 10px;
+            padding: 10px 20px;
             margin: 5px;
-            font-size: 20px;
+            font-size: 1.2rem;
+            background-color: white;
+            color: orange; /* Color del texto de los botones */
+            border: 2px solid orange; /* Marco naranja */
+            border-radius: 8px;
             cursor: pointer;
         }
 
-        #generateButton {
-            font-size: 25px;
-            padding: 15px 30px;
-            margin-top: 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #generateButton:hover {
-            background-color: #0056b3;
+        button:hover {
+            background-color: #f2f2f2; /* Un ligero cambio al pasar el ratón */
         }
 
         .number-display {
@@ -66,27 +74,31 @@
         .number-box {
             width: 80px;
             height: 80px;
-            background-color: #eeeeee;
+            background-color: white; /* Fondo blanco */
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 30px;
             font-weight: bold;
-            color: #333;
+            color: orange; /* Color del texto */
             border-radius: 10px;
-            border: 2px solid #ccc;
+            border: 2px solid orange; /* Borde naranja */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Generador de Números</h1>
-        <div class="controls">
-            <button id="upButton">⬆</button>
-            <button id="downButton">⬇</button>
+    <div class="outer-container">
+        <div class="container">
+            <h1>Generador de números pseudo-aleatorios</h1>
+            <div class="controls">
+                <button id="generateButton">Generar</button>
+                <div>
+                    <button id="upButton">⬆ ASC</button>
+                    <button id="downButton">⬇ DESC</button>
+                </div>
+            </div>
         </div>
-        <button id="generateButton">Generar</button>
         <div class="number-display" id="numberDisplay">
             <!-- Aquí se mostrarán los números generados -->
         </div>
@@ -95,4 +107,5 @@
     <!-- Importamos el módulo JavaScript -->
     <script type="module" src="./script.js"></script>
 </body>
+
 </html>

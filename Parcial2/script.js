@@ -23,7 +23,10 @@ const NumberGeneratorModule = (function () {
         numbers.forEach(number => {
             const numberBox = document.createElement('div');
             numberBox.className = 'number-box';
-            numberBox.textContent = number;
+            
+            // Modificación para mostrar siempre dos cifras
+            numberBox.textContent = number.toString().padStart(2, '0'); // Agregar ceros a la izquierda si es necesario
+
             numberDisplay.appendChild(numberBox);
         });
     }
@@ -52,4 +55,3 @@ const NumberGeneratorModule = (function () {
         sortDescending
     };
 })();
-
