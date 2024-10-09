@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Números con Máquina de Estados</title>
     <style>
+        /* Estilo general del cuerpo para centrar el contenido y aplicar fondo */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,93 +19,110 @@
             box-sizing: border-box;
         }
 
+        /* Contenedor principal con bordes y fondo beige */
         .outer-container {
             width: 80%;
             max-width: 1000px;
-            border: 5px solid orange; /* Marco externo naranja */
+            border: 5px solid orange; /* Marco naranja */
             border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra ligera */
             padding: 20px;
-            background-color: white; /* Fondo blanco */
-            text-align: center; /* Centrar el texto dentro del contenedor */
+            background-color: #F5F5DC; /* Fondo beige claro */
+            text-align: center; /* Centrar texto */
         }
 
+        /* Subcontenedor interno con bordes y espaciado */
         .container {
             padding: 30px;
-            border: 3px solid orange; /* Marco interno naranja */
+            border: 3px solid orange; /* Otro marco naranja */
             border-radius: 15px;
         }
 
+        /* Estilo del título principal */
         h1 {
             color: orange;
             font-size: 2rem;
             margin-bottom: 25px;
         }
 
+        /* Contenedor de los botones de control */
         .controls {
             display: flex;
-            justify-content: space-between; /* Espaciado entre botones */
+            justify-content: space-between; /* Espaciado entre los botones */
             align-items: center;
             margin-bottom: 20px;
         }
 
+        /* Estilo general para los botones */
         button {
             padding: 10px 20px;
             margin: 5px;
             font-size: 1.2rem;
             background-color: white;
-            color: orange; /* Color del texto de los botones */
-            border: 2px solid orange; /* Marco naranja */
+            color: orange; /* Texto y bordes naranjas */
+            border: 2px solid orange;
             border-radius: 8px;
             cursor: pointer;
         }
 
+        /* Efecto hover para los botones */
         button:hover {
-            background-color: #f2f2f2; /* Un ligero cambio al pasar el ratón */
+            background-color: #f2f2f2; /* Cambia a gris claro al pasar el ratón */
         }
 
+        /* Contenedor donde se muestran los números generados */
         .number-display {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 15px; /* Espaciado entre los números */
             margin-top: 30px;
-            flex-wrap: wrap; /* Permitir que los números se envuelvan en múltiples líneas */
+            flex-wrap: wrap; /* Permitir que los números se ajusten en varias líneas */
+            background-color: #D3D3D3; /* Fondo gris claro */
+            padding: 20px;
+            border-radius: 15px; /* Bordes redondeados */
+            border: 3px solid orange; /* Marco naranja */
         }
 
+        /* Estilo para cada número generado */
         .number-box {
             width: 80px;
             height: 80px;
-            background-color: white; /* Fondo blanco */
+            background-color: white; /* Fondo blanco para los números */
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 30px;
             font-weight: bold;
-            color: orange; /* Color del texto */
+            color: orange; /* Números en naranja */
             border-radius: 10px;
-            border: 2px solid orange; /* Borde naranja */
+            border: 2px solid orange; /* Borde naranja para cada número */
         }
     </style>
 </head>
 
 <body>
+    <!-- Contenedor externo para todo el contenido -->
     <div class="outer-container">
+        <!-- Contenedor interno para los controles y la funcionalidad -->
         <div class="container">
             <h1>Generador de números pseudo-aleatorios</h1>
             <div class="controls">
+                <!-- Botón para generar un número -->
                 <button id="generateButton">Generar</button>
+                <!-- Botones para ordenar los números -->
                 <div>
                     <button id="upButton">⬆ ASC</button>
                     <button id="downButton">⬇ DESC</button>
                 </div>
             </div>
         </div>
+        <!-- Área donde se mostrarán los números generados -->
         <div class="number-display" id="numberDisplay">
-            <!-- Aquí se mostrarán los números generados -->
+            <!-- Los números generados se mostrarán aquí -->
         </div>
     </div>
 
-    <!-- Importamos el módulo JavaScript -->
+    <!-- Archivo JavaScript que contiene la lógica de la aplicación -->
     <script type="module" src="./script.js"></script>
 </body>
 
